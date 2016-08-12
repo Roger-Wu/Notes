@@ -27,7 +27,7 @@
     meteor add react-meteor-data
     ```
 
-## methods (前後共通)
+## methods (前後共通的function)
 
 * 定義methods
 
@@ -67,7 +67,7 @@
     Meteor.call('tasks.insert', text);
     ```
 
-## publish, subscribe
+## publish, subscribe (即時更新資料)
 
 * publish
 
