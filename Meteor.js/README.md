@@ -6,7 +6,13 @@
 
     ```
     meteor create app-name
+    cd app-name
+    meteor npm install
     ```
+
+* run
+
+    ```meteor``` or ```meteor run```
 
 * 去除不安全的部分
 
