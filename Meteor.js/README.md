@@ -1,4 +1,4 @@
-# Note-Meteor.js
+# Meteor.js
 
 ## 創建app
 
