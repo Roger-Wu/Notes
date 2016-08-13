@@ -1,6 +1,6 @@
 # Meteor.js
 
-## 使用Meteor的好處
+## Meteor的優點
 * full-stack, isomorphic
 * real-time app
 * web, android, ios
