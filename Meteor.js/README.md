@@ -1,7 +1,11 @@
 # Meteor.js
 
-## 創建app
+## 使用Meteor的好處
+* full-stack, isomorphic
+* real-time app
+* web, android, ios
 
+## 創建app
 * create
 
     ```
@@ -13,7 +17,7 @@
 * run
 
     ```meteor``` or ```meteor run```
-
+    
 * 去除不安全的部分
 
     ```
