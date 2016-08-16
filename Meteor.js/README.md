@@ -81,8 +81,8 @@
 
 * publish
 
-    // tasks.js
     ```js
+    // tasks.js
     if (Meteor.isServer) {
       // This code only runs on the server
       Meteor.publish('tasks', function tasksPublication() {
@@ -93,8 +93,8 @@
 
 * subscribe
 
-    // App.jsx
     ```js
+    // App.jsx
     export default createContainer(() => {
       Meteor.subscribe('tasks');
      
@@ -102,3 +102,71 @@
         tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
         incompleteCount: Tasks.find({ checked: { $ne: true } }).count(),
     ```
+
+## Database
+
+* [官方教學 3](https://www.meteor.com/tutorials/react/collections)
+
+* Create collection
+
+    ```js
+    // imports/api/tasks.js
+    import { Mongo } from 'meteor/mongo';
+ 
+    export const Tasks = new Mongo.Collection('tasks');
+    ```
+
+* Load tasks collection on the server
+
+    ```js
+    // server/main.js
+    import '../imports/api/tasks.js';
+    ```
+
+* Using data from a collection inside a React component
+
+    To use data from a Meteor collection inside a React component, we can use an Atmosphere package react-meteor-data which allows us to create a "data container" to feed Meteor's reactive data into React's component hierarchy.
+    We need to install that package alongside a NPM package it utilizes, react-addons-pure-render-mixin:
+    
+    ```
+    meteor npm install --save react-addons-pure-render-mixin
+    meteor add react-meteor-data
+    ```
+    
+    To use react-meteor-data, we need to wrap our component in a container using the createContainer Higher Order Component:
+    
+    ```js
+    import React, { Component, PropTypes } from 'react';
+    import { createContainer } from 'meteor/react-meteor-data';
+     
+    import { Tasks } from '../api/tasks.js';
+     
+    import Task from './Task.jsx';
+     
+    // App component - represents the whole app
+    class App extends Component {
+      renderTasks() {
+        return this.props.tasks.map((task) => (
+          <Task key={task._id} task={task} />
+        ));
+      }
+    ...some lines skipped...
+        );
+      }
+    }
+    
+    // propTypes are defined as properties on the constructor instead of in the class body
+    App.propTypes = {
+      tasks: PropTypes.array.isRequired,
+    };
+     
+    export default createContainer(() => {
+      return {
+        tasks: Tasks.find({}).fetch(),  // fetch data from MongoDB
+      };
+    }, App);  // data injected into App component as props
+    ```
+    
+    注意[In ES6, propTypes and defaultProps are defined as properties on the constructor instead of in the class body.](https://facebook.github.io/react/docs/reusable-components.html#es6-classes)
+    
+    
