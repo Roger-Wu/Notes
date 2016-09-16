@@ -27,13 +27,13 @@
 
 * 換成React
 
-    [官方教學 step 2](https://www.meteor.com/tutorials/react/components)
+    請按照[官方教學 step 2: Defining views with React components](https://www.meteor.com/tutorials/react/components)
+    
+    及[官方教學 step 3: Storing tasks in a collection](https://www.meteor.com/tutorials/react/collections)做
+    
     ```
     meteor npm install --save react react-dom
     meteor npm install --save react-addons-pure-render-mixin
-    ```
-    [官方教學 step 3](https://www.meteor.com/tutorials/react/collections)
-    ```
     meteor add react-meteor-data
     ```
 
