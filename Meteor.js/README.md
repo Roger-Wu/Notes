@@ -1,6 +1,13 @@
-# Meteor.js
+# Meteor.js Notes
+
+## 學習資源
+
+* [Official Tutorials](https://www.meteor.com/tutorials)
+* [Official Guide](https://guide.meteor.com/)
+* [Official Documentation](http://docs.meteor.com/#/full/)
 
 ## Meteor的優點
+
 * full-stack, isomorphic
 * real-time app
 * web, android, ios
