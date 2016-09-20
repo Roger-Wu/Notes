@@ -14,8 +14,7 @@
 * Install
 
   ```
-  meteor npm install --save material-ui
-  meteor npm install --save react-tap-event-plugin
+  meteor npm install --save material-ui react-tap-event-plugin
   ```
 
 * Usage
@@ -39,7 +38,7 @@
     class App extends Component {
       render() {
         return (
-          <MuiThemeProvider muiTheme={muiTheme}>
+          <MuiThemeProvider>
             ...
           </MuiThemeProvider>
         );
