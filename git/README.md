@@ -22,6 +22,8 @@
 
 * gco='git checkout'
 * gcb='git checkout -b'
+* gcd='git checkout develop'
+* gcm='git checkout master'
 
 ### my aliases
 
