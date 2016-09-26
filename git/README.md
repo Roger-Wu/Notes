@@ -11,6 +11,10 @@
 
 --
 
+* gcmsg='git commit -m'
+
+--
+
 * gb='git branch'
 * gbr='git branch --remote'
 
@@ -18,11 +22,6 @@
 
 * gco='git checkout'
 * gcb='git checkout -b'
-
---
-
-* gcmsg='git commit -m'
-
 
 ### my aliases
 
