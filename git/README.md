@@ -28,3 +28,4 @@
 ### my aliases
 
 * gpoh='git push origin HEAD'
+* gau='git add -u'
