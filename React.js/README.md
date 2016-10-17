@@ -29,7 +29,7 @@
   <MyAppBar location={this.props.location} />
   ```
 
-2. set <Tab/>'s containerElement to <Link/>
+2. set ```<Tab/>```'s containerElement to ```<Link/>```
 
   ```jsx
   <Tabs>
@@ -39,7 +39,7 @@
   </Tabs>
   ```
 
-3. set value of <Tab> and <Tabs> so the active <Tab> is synchronous with routing
+3. set value of ```<Tab>``` and ```<Tabs>``` so the active ```<Tab>``` is synchronous with routing
 
   ```jsx
   <Tabs value={this.props.location.pathname}>
